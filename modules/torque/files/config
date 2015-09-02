@@ -1,0 +1,3 @@
+$pbsserver goethe-0
+$logevent 255
+$usecp *:/home /home

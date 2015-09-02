@@ -1,0 +1,5 @@
+export MODULEPATH=/ssd/modules
+export MODULESHOME=/ssd/modules
+function module() {
+  eval `modulecmd bash $*` 
+}

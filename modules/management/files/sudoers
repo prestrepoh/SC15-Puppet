@@ -1,0 +1,49 @@
+## Sudoers allows particular users to run various commands as
+## the root user, without needing the root password.
+
+## Host Aliases
+
+## User Aliases
+
+# Disable "ssh hostname sudo <cmd>", because it will show the password in clear.
+# You have to run "ssh -t hostname sudo <cmd>".
+Defaults    requiretty
+
+# Refuse to run if unable to disable echo on the tty. This setting should also be
+# changed in order to be able to use sudo without a tty. See requiretty above.
+Defaults   !visiblepw
+
+Defaults    env_reset
+Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS_COLORS"
+Defaults    env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+
+Defaults  mail_badpass
+Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+## user MACHINE=COMMANDS
+
+root        ALL=(ALL)  ALL
+prestrepo   ALL=(ALL)  ALL
+mgomezzul   ALL=(ALL)  ALL
+lev         ALL=(ALL)  ALL
+jpineda     ALL=(ALL)  ALL
+mmolo       ALL=(ALL)  ALL
+jlee        ALL=(ALL)  ALL
+agomezl     ALL=(ALL)  ALL
+ewynne      ALL=(ALL)  ALL
+chuck       ALL=(ALL)  ALL
+ccorre20    ALL=(ALL)  ALL
+tgomez      ALL=(ALL)  ALL
+jyepes      ALL=(ALL)  ALL
+asalgado    ALL=(ALL)  ALL
+lmejia      ALL=(ALL)  ALL
+dsalazar    ALL=(ALL)  ALL
+jvasquez    ALL=(ALL)  ALL
+
+
+
+
+

@@ -1,0 +1,1 @@
+/ssd   192.168.56.0/24(no_root_squash,rw,sync)
